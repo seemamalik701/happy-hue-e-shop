@@ -226,21 +226,92 @@ footer h4 {
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .category-grid,
+/* Medium Devices: Tablets and below (<= 1024px) */
+@media (max-width: 1024px) {
   .product-grid,
+  .category-grid,
   .testimonial-grid,
   .footer-columns {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .product-card,
+  .category {
+    width: 45%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Small Devices: Phones and below (<= 768px) */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .product-card,
+  .category {
+    width: 90%;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .newsletter input {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter form {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Extra Small Devices: Narrow phones (<= 480px) */
+@media (max-width: 480px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .category,
+  .product-card {
+    width: 100%;
+  }
+
+  .footer-columns div {
+    width: 100%;
   }
 }
